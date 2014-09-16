@@ -77,7 +77,7 @@ function paste(){
 		$db->asXML("mlDB.xml");
 	}else index();
 	
-	$url = 'http://'.$_SERVER['HTTP_HOST'].'index.php?id='.$id;
+	$url = 'http://'.$_SERVER['HTTP_HOST'].'/index.php?id='.$id;
 	echo $url;
 }
 
@@ -115,6 +115,15 @@ function syntax($id, $lang){
 	
 	
 function index(){
+	//for windows user
+	/* <form method="POST" action="">
+	   <textbox name="mlPaste">
+	   <input type="submit" value="Paste">
+	*/
+	
+	header("Contet-type: text/plain");
+	echo 'For GNU/Linux Users';
+	echo "cat <file.php> | curl -F 'mlPaste' http://site/";
 }
 		
 	
