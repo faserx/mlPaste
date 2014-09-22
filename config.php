@@ -1,7 +1,8 @@
 <?php
 
-$db_table = "table";
-$db_name = "ciao";
-$db_user = "piero";
-$db_pass = "piero";
+$db_table = "";
+$db_name = "";
+$db_user = "";
+$db_pass = "";
+
 ?>
