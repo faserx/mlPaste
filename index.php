@@ -40,10 +40,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET')
 	
 function show_index()
 {
-	echo'
-	<form method="POST" action="index.php">
-	<textarea name="paste"></textarea>
-	<input type="submit" value="invia"></form>';
-	echo "mlPaste";
+	header("Content-type: text/plain");
+	echo file_get_contents("README");
 }
 ?>
