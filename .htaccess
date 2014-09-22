@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^/?([A-Za-z0-9]{5})$	   index.php?id=$1
+RewriteRule ^/?shl/([A-Za-z0-9]{5})$	   index.php?id=$1&shl

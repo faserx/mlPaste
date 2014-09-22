@@ -1,0 +1,26 @@
+<!DOCTYPE html><meta charset="utf-8">
+<html><head><link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/zenburn.min.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>	
+<script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
+<script>
+		$(function (){
+		if (location.hash.length > 1){
+			var lang = location.hash.substr(1);
+
+			if (typeof hljs.getLanguage(lang) === 'undefined'){
+				hljs.initHighlighting();
+			} else {
+				hljs.configure({ languages: [lang] });
+				hljs.initHighlighting({ languages: [lang] });
+			} 
+		} else {
+			hljs.initHighlighting();
+		}
+
+		
+		$("pre code").addClass('prettyprint linenums');
+		prettyPrint();
+		$(document.body).css('background-color', $("#line").css('background-color'));
+		});
+</script></head>
+<body><pre><code id="line"><!-- %codice% --></code></pre></body></html>
