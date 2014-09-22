@@ -1,0 +1,8 @@
+mlPaste
+=======
+
+mlPaste a minimal command line no paste.
+
+
+SYNOPSIS:
+    cat <source.extension> | Curl -F 'mlPaste=<-' <http://yourhost/>
